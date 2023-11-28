@@ -7,8 +7,7 @@ while True:
     if ja not in dogadjaji:
         print("Niste dobro uneli. Unesite ponovo.")
         continue
-    racunar = random.randint(0,2)
-    izbor_kompjutera = dogadjaji[racunar]
+    izbor_kompjutera = random.choice(dogadjaji)
     print("Kompjuter je odabrao:",izbor_kompjutera)
     if ja == izbor_kompjutera:
         print("Nereseno.")
@@ -21,6 +20,8 @@ while True:
         ja_score += 1
     else:
         kompa_score += 1
+    print("JA: {}".format(ja_score))
+    print("KOMPJUTER: {}".format(kompa_score))
     if ja_score == 3 or kompa_score == 3:
         break
 if ja_score>kompa_score:
